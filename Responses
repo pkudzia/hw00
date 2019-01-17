@@ -1,0 +1,16 @@
+# Question 4
+First rewrite the pendulum equation in terms of theta’’ = wn*theta.  
+To simulate this second-order differential equation we need to convert it to a series of first order equations. 
+To do this we re-write out the vector, lets call it x, which has two components :
+{ x1 = theta  , x2 =theta’ } 
+next we write out the derivatives of those :
+{d/dt x1 = x2 , d/dt x2 = wn*x1}
+We would then be able to set up the ode45 solver and make wn variable that is equal to 1 and solve our ODE. 
+
+# Question 5
+We can simulate this initial value problem (IVP) similarly as noted above. Since it is a first order we write series of equations which could simply too 
+{d/dt x1 = -1} in the @f of the ode solverer.
+Would wiykd then run it from a starting condition of x0 =1 over a defined tspan. To solve the IVP. 
+
+# Question 6
+Manoj once told me that event detection is not the ‘best' approach in ODE simulation. I forget exactly why but I think he meant that the approach isn’t robust.  Can anyone comment on this or has experiences that can speak to this ? 
